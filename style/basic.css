@@ -8,5 +8,14 @@ header{
 }
 
 header h1 {
-  background-image: url("images/logo.png");
+  background: url('../images/logo_400x400.png') 0px 0px/5pc 5pc
+              no-repeat;
+  height: 5pc;
+  padding-top: 1.8pc;
+  padding-left: 5pc;
+  color: #800000;
+}
+
+nav {
+
 }
