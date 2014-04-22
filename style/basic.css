@@ -42,17 +42,51 @@ nav li {
 
 }
 
-.content {
+/* Sidebars */
+div#sidebar-left {
+  border: 1px solid #000000;
+  border-radius: 0.5em;
+  float: left;
+  margin: 1em;
+  padding: 1em;
+  width: 10em;
+}
+
+div#sidebar-left ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+div#sidebar-left li {
+  margin-left: 0;
+}
+
+div#sidebar-right {
+  border: 1px solid #000000;
+  border-radius: 0.5em;
+  float: right;
+  margin: 1em;
+  padding: 1em;
+  width: 5em;
+}
+
+/* Main Content */
+div#content-main {
+  display: block;
+}
+
+/* All Content */
+div#content {
   background-color: #ACAC98;
   padding-top: 1pc;
   padding-bottom: 1pc;
 }
 
-.content h2 {
+div#content h2 {
 
 }
 
-.content p {
+div#content p {
   font-size: 13pt;
 }
 
