@@ -12,15 +12,9 @@ html {
   background-color: #fff;
 }
 
-<<<<<<< HEAD
 header .banner {
   padding-left: 2pc;
-=======
-/* Header section */
 
-header {
-  padding-left: 2em;
->>>>>>> sidebars
 }
 
 header h1 {
@@ -75,7 +69,6 @@ nav ul {
 nav li {
   display:inline;
   list-style-type: none;
-<<<<<<< HEAD
   padding-right: 1pc;
 
 }
@@ -86,7 +79,6 @@ nav form {
 
 nav form input {
   display: inline;
-=======
 
 }
 
@@ -94,7 +86,6 @@ nav a {
   text-decoration: none;
   padding-left: 1em;
   padding-right: 1em;
->>>>>>> sidebars
 }
 
 /* Sidebars */
