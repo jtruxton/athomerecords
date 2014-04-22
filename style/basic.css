@@ -1,43 +1,58 @@
 html {
-  background: url('../images/record_store.png') no-repeat;
-  width: 100pc;
-  height: 100pc;
+  /* background: url('../images/record_store.png') no-repeat; */
+  width: 100em;
+  height: 100em;
 }
 
-.wrapper{
-  margin-left: 10pc;
-  margin-right: 10pc;
+.wrapper {
+  margin-left: 10em;
+  margin-right: 10em;
   border-style: solid;
-  width: 60pc;
+  width: 60em;
   background-color: #fff;
 }
 
-header{
+header .banner {
   padding-left: 2pc;
+
 }
 
 header h1 {
-  background: url('../images/logo_400x400.png') 0px 0px/5pc 5pc
-              no-repeat;
-  height: 5pc;
-  padding-top: 1.8pc;
-  padding-left: 5pc;
+  background: url('../images/logo_400x400.png');
+  background-size: 72px 72px;
+  background-repeat: no-repeat;
   color: #800000;
+  display: inline-block;
+  float: left;
+  height: 54px;
+  margin: 0;
+  padding-top: 21px;
+  padding-left: 52px;
+}
+
+form#search input[type="text"] {
+}
+
+form#search input[type="submit"] {
+  background: none;
+  border: 1px solid #ACAC98;
+  border-radius: 0 0.5em 0.5em 0;
 }
 
 nav {
   clear: both;
+  border-style: solid;
 }
 
 nav ul {
   display:inline;
   list-style-type: none;
+  margin: 0 auto;
 }
 
 nav li {
   display:inline;
   list-style-type: none;
-  padding-left: 1pc;
   padding-right: 1pc;
 
 }
@@ -48,16 +63,32 @@ nav form {
 
 nav form input {
   display: inline;
+
+}
+
+nav a {
+  text-decoration: none;
+  /*padding-left: 1em;
+  padding-right: 1em;*/
 }
 
 /* Sidebars */
-div#sidebar-left {
+div#sidebar-left, div#sidebar-right {
   border: 1px solid #000000;
   border-radius: 0.5em;
+  display: inline;
   float: left;
-  margin: 1em;
+  margin-top: 4em;
   padding: 1em;
-  width: 10em;
+  width: 15%;
+}
+
+div#sidebar-left {
+  float: left;
+}
+
+div#sidebar-right {
+  float: right;
 }
 
 div#sidebar-left ul {
@@ -69,25 +100,31 @@ div#sidebar-left li {
   margin-left: 0;
 }
 
-div#sidebar-right {
-  border: 1px solid #000000;
-  border-radius: 0.5em;
-  float: right;
-  margin: 1em;
-  padding: 1em;
-  width: 5em;
-}
-
 /* Main Content */
 div#content-main {
-  display: block;
+  display: inline-block;
+  float: left;
+  padding: 1em;
+  width: 59%;
+}
+
+/* Breadcrumbs */
+ol.breadcrumbs {
+  list-style-type: none;
+  margin: 0 auto;
+}
+ol.breadcrumbs li {
+  display: inline;
+}
+ol.breadcrumbs li:before {
+  content: "\00BB\0020";
 }
 
 /* All Content */
 div#content {
   background-color: #ACAC98;
-  padding-top: 1pc;
-  padding-bottom: 1pc;
+  overflow: auto;
+  padding: 1em;
 }
 
 div#content h2 {

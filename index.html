@@ -15,24 +15,29 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1> 
-          home r3corDs
-        </h1> 
+        <div class="banner">
+          <h1> 
+            home r3corDs
+          </h1> 
+        </div>
         <nav id="navigation">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="dailydeals.html">Daily Deals</a></li>
             <li><a href="browse.html">Browse</a></li>
-            <li><form id="login-user" action="">
-              <label for="nav-search">Login</label>
-              <input type="text" id="nav-username" size="20" />
-              <input type="submit" value="Go" />
-            </form></li>
-            <li><form id="search" action="">
-              <label for="nav-search">Search</label>
-              <input type="text" id="nav-search" size="20" />
-              <input type="submit" value="Search" />
-            </form></li>
+            <li>
+              <form id="search" action="">
+                <input type="text" id="nav-search" size="20" value="Search" />
+                <input type="submit" value="Search" />
+              </form>
+            </li>
+            <li>
+              <form id="login-user" action="">
+                <input type="text" id="nav-username" size="20" value="Username" />
+                <input type="password" id="nav-password" size="20" value="Password" />
+                <input type="submit" value="Login" />
+              </form>
+            </li>
           </ul>
         </nav>
       </header>
@@ -42,16 +47,16 @@
           <form id="price-form">
             <ul class="price">
               <li>
-                <input type="radio" name="price" value="lt10">
-                under $10</input>
+                <input type="radio" name="price" value="lt10" />
+                under $10
               </li>
               <li>
-                <input type="radio" name="price" value="10-20">
-                $10 - $20</input>
+                <input type="radio" name="price" value="10-20" />
+                $10 - $20
               </li>
               <li>
-                <input type="radio" name="price" value="gt20">
-                over $20</input>
+                <input type="radio" name="price" value="gt20" />
+                over $20
               </li>
             </ul>
             <input type="submit" value="Go" />
@@ -61,35 +66,43 @@
             <ul class="genre">
               <!-- Values are from ID3 genre ID's -->
               <li>
-                <input type="radio" name="price" value="1">
-                Classic Rock</input>
+                <input type="radio" name="genre" value="1" />
+                Classic Rock
               </li>
               <li>
-                <input type="radio" name="price" value="3">
-                Dance</input>
+                <input type="radio" name="genre" value="3" />
+                Dance
               </li>
               <li>
-                <input type="radio" name="price" value="11">
-                Oldies</input>
+                <input type="radio" name="genre" value="11" />
+                Oldies
               </li>
               <li>
-                <input type="radio" name="price" value="15">
-                Rap</input>
+                <input type="radio" name="genre" value="15"/>
+                Rap
               </li>
               <li>
-                <input type="radio" name="price" value="18">
-                Techno</input>
+                <input type="radio" name="genre" value="18">
+                Techno
               </li>
               <li>
-                <input type="radio" name="price" value="32">
-                Classical</input>
+                <input type="radio" name="genre" value="32">
+                Classical
               </li>
             </ul>
             <input type="submit" value="Go" />
           </form>
         </div>
-        <div id="sidebar-right">&nbsp;</div>
+        <div id="sidebar-right">
+          <p>
+            Some content goes here, like special offers or product overviews.
+          </p>
+        </div>
         <div id="content-main">
+          <ol class="breadcrumbs">
+            <li>bread</li>
+            <li>crumbs</li>
+          </ol>
           <h2> The Future of Music <!-- or something --></h2>
           <p>
             <!-- copy goes here -->
