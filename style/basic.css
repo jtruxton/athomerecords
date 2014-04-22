@@ -13,7 +13,7 @@ html {
 }
 
 header{
-
+  padding-left: 2pc;
 }
 
 header h1 {
@@ -37,20 +37,35 @@ nav ul {
 nav li {
   display:inline;
   list-style-type: none;
-}
-
-body {
-  
-}
-
-h2 {
+  padding-left: 1pc;
+  padding-right: 1pc;
 
 }
 
-p {
+.content {
+  background-color: #ACAC98;
+  padding-top: 1pc;
+  padding-bottom: 1pc;
+}
+
+.content h2 {
+
+}
+
+.content p {
   font-size: 13pt;
 }
 
 footer {
   font-size: 13pt;
+  /* gradient */
+  background: #ACAC98; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ACAC98 80%, #000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%,#ACAC98), color-stop(100%,#000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ACAC98 80%,#000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ACAC98 80%,#000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ACAC98 80%,#000 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ACAC98 80%,#000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ACAC98', endColorstr='#000',GradientType=0 ); /* IE6-9 */
+
 }
