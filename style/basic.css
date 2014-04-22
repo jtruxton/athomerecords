@@ -12,7 +12,7 @@ html {
   background-color: #fff;
 }
 
-header{
+header .banner {
   padding-left: 2pc;
 }
 
@@ -27,6 +27,7 @@ header h1 {
 
 nav {
   clear: both;
+  border-style: solid;
 }
 
 nav ul {
