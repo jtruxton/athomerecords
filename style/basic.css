@@ -30,28 +30,13 @@ header h1 {
   padding-left: 52px;
 }
 
-form#login-user {
-  float: right;
-}
-
-form#search {
-  float: right;
-  clear: both;
-  width: 100%;
-}
-
 form#search input[type="text"] {
-  font-size: 1.2em;
-  margin-right: 0;
-  width: 50%;
 }
 
 form#search input[type="submit"] {
   background: none;
   border: 1px solid #ACAC98;
   border-radius: 0 0.5em 0.5em 0;
-  font-size: 1.2em;
-  margin-left: 0;
 }
 
 nav {
@@ -61,7 +46,6 @@ nav {
 
 nav ul {
   display:inline;
-  font-size: 1.2em;
   list-style-type: none;
   margin: 0 auto;
 }
@@ -84,8 +68,8 @@ nav form input {
 
 nav a {
   text-decoration: none;
-  padding-left: 1em;
-  padding-right: 1em;
+  /*padding-left: 1em;
+  padding-right: 1em;*/
 }
 
 /* Sidebars */
