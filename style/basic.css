@@ -1,6 +1,14 @@
+html {
+  background: url('../images/record_store.png') no-repeat;
+  width: 100pc;
+  height: 100pc;
+}
+
 .wrapper{
   margin-left: 10pc;
   margin-right: 10pc;
+  border-style: solid;
+  background-color: #fff;
 }
 
 header{
@@ -29,9 +37,9 @@ h2 {
 }
 
 p {
-
+  font-size: 13pt;
 }
 
 footer {
-
+  font-size: 13pt;
 }
