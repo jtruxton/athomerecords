@@ -30,15 +30,6 @@ header h1 {
   padding-left: 52px;
 }
 
-form#search input[type="text"] {
-}
-
-form#search input[type="submit"] {
-  background: none;
-  border: 1px solid #ACAC98;
-  border-radius: 0 0.5em 0.5em 0;
-}
-
 nav {
   clear: both;
   border-style: solid;
@@ -64,6 +55,12 @@ nav form {
 nav form input {
   display: inline;
 
+}
+
+nav form input[type="submit"] {
+  background: none;
+  border: 1px solid #ACAC98;
+  border-radius: 0 0.5em 0.5em 0;
 }
 
 nav a {
