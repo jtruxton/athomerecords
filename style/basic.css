@@ -42,6 +42,14 @@ nav li {
 
 }
 
+nav form {
+  display:inline;
+}
+
+nav form input {
+  display: inline;
+}
+
 /* Sidebars */
 div#sidebar-left {
   border: 1px solid #000000;
