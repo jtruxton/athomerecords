@@ -8,6 +8,7 @@ html {
   margin-left: 10pc;
   margin-right: 10pc;
   border-style: solid;
+  width: 60pc;
   background-color: #fff;
 }
 
@@ -25,7 +26,17 @@ header h1 {
 }
 
 nav {
+  clear: both;
+}
 
+nav ul {
+  display:inline;
+  list-style-type: none;
+}
+
+nav li {
+  display:inline;
+  list-style-type: none;
 }
 
 body {
