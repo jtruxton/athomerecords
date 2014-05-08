@@ -1,0 +1,93 @@
+# COMMANDS TO CREATE THE .rb FILES:
+ruby script/generate model Album
+ruby script/generate model Artist
+ruby script/generate model Track
+ruby script/generate model Genre
+ruby script/generate model Label
+ruby script/generate model Rightsholder
+ruby script/generate model User
+ruby script/generate model Item
+ruby script/generate model Transaction
+ruby script/generate model Addresse
+ruby script/generate model PaymentMethod
+
+
+# THIS NEEDS TO BE INSERTED INTO THE .rb FILES AFTER CREATION
+class Albums < ActiveRecord::Base
+	title: string
+	format: string
+	released: date
+	credits: string
+	notes: string
+	cover: string
+has_one :label
+has_many :artists
+has_many :genres
+has_many :tracks
+end
+
+class Artists < ActiveRecord::Base
+	details: string # bio, etc.
+end
+
+class Track < ActiveRecord::Base
+	position: string # For things like "A2" for A-sides
+	title: string
+	details: string  # maybe lyrics, etc.
+end
+
+class Genres < ActiveRecord::Base
+	# Nothing extra needed, unless we want a description of genres or something.
+end
+
+class Label < ActiveRecord::Base
+	details: string # label history, etc.
+belongs_to :album
+end
+
+class Rightsholder < ActiveRecord::Base
+	contact: string    # "Attn:" in address line
+	rate: double       # Payout rate for albums
+	enum type: [ :publisher, :recording ]
+has_one :address
+has_one :paymentmethod # for payouts... do this, or invoices?
+has_many :albums
+end
+
+class User < ActiveRecord::Base
+	pass: string    # is there a "password" type in Rails? I forget
+	profile: string
+has_one :address    # Shipping address
+has_many :paymentmethods
+end
+
+class Item < ActiveRecord::Base
+	type: string
+	format: string
+	demand: int        # I assume how many requests were made?
+	available: boolean # So people can request items we don't have
+has_one :album
+end
+
+class Transaction < ActiveRecord::Base
+has_one :paymentmethod # "Paid With" relation
+has_many :items
+belongs_to :user
+end
+
+class Address < ActiveRecord::Base
+	name: string    # Probably different than user name, rights holder name, etc.
+	street1: string	# Main street address/PO box
+	street2: string # Apartment number, etc.
+	city: string
+	state: string
+	country: string
+end
+
+class PaymentMethod < ActiveRecord::Base
+	type: string       # MasterCard, Visa, bank account, etc.
+	identifier: string # Will vary by type - e.g. bank routing number
+	validation: string # e.g. security code
+	expires: date
+has_one :address       # Billing address
+end
