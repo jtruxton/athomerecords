@@ -8,9 +8,11 @@ use = log.user
 use.Address
 
 add user info
-use = User.where(Username: Jimbo)
-p = Login.create(username: use, password: "passCode")
-a = Address.create(name: use, street1: "6 High St.", city: "Boston", state: "MA",
+u = user.New
+u.username = "Jimbo"
+u.save
+p = Login.create(username: u, password: "passCode")
+a = Address.create(name: u, street1: "6 High St.", city: "Boston", state: "MA",
 	country: "USA")
 
 items
