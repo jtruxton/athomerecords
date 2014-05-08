@@ -1,0 +1,40 @@
+users
+find user info
+log = Login.where(Username: Jimbo)
+log.user.profile
+
+User Billing/Shipping Address
+use = log.user
+log.Address
+
+items
+find price of item
+i = Album.where(title: "Dark Side of the Moon")
+i.Item.price
+
+
+albums
+find album by name
+a = Album.where(title: "Dark Side of the Moon") 
+
+
+find albums by artist
+art = Artist.Where(name: "Pink Floyd")
+art.albums
+
+find albums by genre
+gen = Genre.where(name: "Rock")
+gen.albums
+
+find album by name and size
+a = Album.where(title: "Dark Side of the Moon", size: "12inc")
+
+
+rightsholders
+find payment rate
+al = Album.where(name: "Dark Side of the Moon:)
+al.rightsholder.rate
+
+Get RightsHolder Business Adress
+rh = al.rightsholder.address
+rh.address
