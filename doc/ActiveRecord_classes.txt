@@ -29,20 +29,24 @@ end
 
 class Artists < ActiveRecord::Base
 	details: string # bio, etc.
+	validates_presence_of :name
 end
 
 class Track < ActiveRecord::Base
 	position: string # For things like "A2" for A-sides
 	title: string
 	details: string  # maybe lyrics, etc.
+	validates_presence_of :title
 end
 
 class Genres < ActiveRecord::Base
 	# Nothing extra needed, unless we want a description of genres or something.
+	validates_presence_of :name
 end
 
 class Label < ActiveRecord::Base
 	details: string # label history, etc.
+	validates_presence_of :name
 belongs_to :album
 end
 
@@ -50,6 +54,7 @@ class Rightsholder < ActiveRecord::Base
 	contact: string    # "Attn:" in address line
 	rate: double       # Payout rate for albums
 	enum type: [ :publisher, :recording ]
+	validates_presence_of :contact
 has_one :address
 has_one :paymentmethod # for payouts... do this, or invoices?
 has_many :albums
@@ -58,6 +63,7 @@ end
 class User < ActiveRecord::Base
 	pass: string    # is there a "password" type in Rails? I forget
 	profile: string
+	validates_presence_of :username
 has_one :address    # Shipping address
 has_many :paymentmethods
 end
@@ -68,12 +74,14 @@ class Item < ActiveRecord::Base
 	demand: int        # I assume how many requests were made?
 	available: boolean # So people can request items we don't have
 has_one :album
+validates_presence_of :type
 end
 
 class Transaction < ActiveRecord::Base
 has_one :paymentmethod # "Paid With" relation
 has_many :items
 belongs_to :user
+
 end
 
 class Address < ActiveRecord::Base
@@ -83,6 +91,7 @@ class Address < ActiveRecord::Base
 	city: string
 	state: string
 	country: string
+	validates_presence_of :name
 end
 
 class PaymentMethod < ActiveRecord::Base
@@ -91,4 +100,5 @@ class PaymentMethod < ActiveRecord::Base
 	validation: string # e.g. security code
 	expires: date
 has_one :address       # Billing address
+validates_presence_of :identifier
 end
