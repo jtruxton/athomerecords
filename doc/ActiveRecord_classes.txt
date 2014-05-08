@@ -20,6 +20,7 @@ class Albums < ActiveRecord::Base
 	credits: string
 	notes: string
 	cover: string
+	validates_presence_of :title
 has_one :label
 has_many :artists
 has_many :genres
