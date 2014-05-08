@@ -1,0 +1,85 @@
+# Note: I do not include either the ID or the Name fields, since Rails does them
+
+# For discography
+
+Model: Albums
+	title: string
+	format: string # 7", 12", 10"
+	released: date
+	credits: string
+	notes: string
+	cover: URL # I'm not sure what this is in Ruby... string?
+has_one
+	:label
+has_many
+	:artists
+	:genres
+
+Model: Artists
+	details: string # bio, etc.
+
+Model: Tracks
+	position: int
+	title: string
+	details: string # maybe lyrics, etc.
+belongs_to
+	:album
+
+Model: Genres
+	# nothing - just need name and ID.
+
+Model: Labels
+	details: string # label history, etc.
+
+# User and rights holder info
+
+Model: Rightsholder
+	contact: string # "Attn:" in address line
+	rate: double # Payout rate for albums
+	enum type: [ :publisher, :recording] # I think this is how enums work...
+has_one
+	:address
+	:paymentmethod # for payouts... do this, or invoices?
+has_many
+	:albums
+
+Model: Users
+	pass: string # is there a "password" type in Rails? I forget
+	profile: string
+has_one
+	:address # Shipping address
+	:paymentmethod
+
+# Ordering subsystem
+
+Model: Items
+	type: string
+	format: string
+	demand: int # I assume how many requests were made?
+	available: boolean # So people can request items we don't have
+has_one
+	:album
+
+Model: Transactions
+has_one
+	:paymentmethod # "Paid With" relation
+has_many
+	:items
+belongs_to
+	:user
+
+Model: Addresses
+	name: string # Probably different than user name, rights holder name, etc.
+	street1: string	# Main street address/PO box
+	street2: string # Apartment number, etc.
+	city: string
+	state: string
+	country: string
+
+Model: PaymentMethod
+	type: string # MasterCard, Visa, bank account, etc.
+	identifier: string # Will vary by type - e.g. bank routing number
+	validation: string # e.g. security code
+	expires: date
+has_one
+	:address # Billing address
