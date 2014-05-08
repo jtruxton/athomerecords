@@ -12,6 +12,9 @@ find price of item
 i = Album.where(title: "Dark Side of the Moon")
 i.Item.price
 
+get download address
+dl = i.Item
+dl.File.location
 
 albums
 find album by name
@@ -38,3 +41,5 @@ al.rightsholder.rate
 Get RightsHolder Business Adress
 rh = al.rightsholder.address
 rh.address
+
+
