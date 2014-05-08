@@ -8,7 +8,7 @@ ruby script/generate model Rightsholder
 ruby script/generate model User
 ruby script/generate model Item
 ruby script/generate model Transaction
-ruby script/generate model Addresse
+ruby script/generate model Address
 ruby script/generate model PaymentMethod
 
 
